@@ -27,6 +27,7 @@ Move the binary
 # 📂 help-ukraine/
 sudo cp target/release/help-ukraine /usr/bin/help-ukraine
 ```
+**On windows** the executable will be `target\release\help-ukraine.exe` you can move it wherever you want.
 # Usage 📝
 ![](images/usage.png)
 ## Example 
