@@ -63,6 +63,8 @@ fn main() {
                             process::exit(1);
                         }
                     };
+                    args.remove(0);
+                    args.remove(0);
                 } else {
                     println!(
                         "{}[ x ] : Argument needed after : {}{} {} {}",
