@@ -137,9 +137,9 @@ fn main() {
             println!("{}{}", YELLOW, url);
             let _ = cursor.hide();
             loop {
+                std::thread::sleep(std::time::Duration::from_millis(delay));
                 let start = SystemTime::now();
                 req_count += 1;
-                std::thread::sleep(std::time::Duration::from_millis(delay));
                 // Extra spaces to remove the chars left from the previous request
                 println!(
                     "\r{}requests sent : {}{} {}-{} Average ping: {}ms - {}                  ",
