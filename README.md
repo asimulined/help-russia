@@ -21,6 +21,17 @@ USE AT YOUR OWN RISK.
 
 # Installation 📦
 
+## With make
+
+Run make
+
+```bash
+# 📂 help-ukraine/
+make
+```
+
+## Or
+
 **Clone this repo**
 
 ```bash
@@ -54,6 +65,17 @@ help-ukraine -d 200
 ```
 
 # Uninstall 🗑
+
+## With make
+
+Run make uninstall
+
+```bash
+# 📂 help-ukraine/
+make uninstall
+```
+
+## Or
 
 Just remove the binary
 
