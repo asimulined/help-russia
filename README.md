@@ -64,6 +64,21 @@ sudo cp target/release/help-ukraine /usr/bin/help-ukraine
 help-ukraine -d 200 
 ```
 
+# Docker 🐳
+
+### Build 🛠️
+
+```bash
+# 📂 help-ukraine/
+docker build -t help-ukraine .
+```
+
+### Run 🏃
+
+```bash
+docker run -it help-ukraine
+```
+
 # Uninstall 🗑
 
 ## With make
