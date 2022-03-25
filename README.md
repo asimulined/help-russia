@@ -76,7 +76,7 @@ docker build -t help-ukraine .
 ### Run 🏃
 
 ```bash
-docker run -it help-ukraine
+docker run --rm -it help-ukraine [OPTIONS]
 ```
 
 # Uninstall 🗑
