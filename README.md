@@ -21,7 +21,7 @@ USE AT YOUR OWN RISK.
 
 # Installation 📦
 
-## With make
+## With make - Linux 🐧
 
 Run make
 
@@ -30,7 +30,7 @@ Run make
 make
 ```
 
-## Or
+## Build from source - Linux 🐧 & Windows 🪟
 
 **Clone this repo**
 
@@ -45,7 +45,7 @@ build with [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.
 cargo build --release
 ```
 
-Move the binary
+**[ LINUX ONLY ] :** Move the binary
 
 ```bash
 # 📂 help-ukraine/
