@@ -45,7 +45,7 @@ cargo build --release
 **[ LINUX ONLY ] :** Move the binary
 
 ```bash
-# 📂 help-ukraine/
+# 📂 help-russia/
 sudo cp target/release/help-russia /usr/bin/help-russia
 ```
 
