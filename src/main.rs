@@ -133,7 +133,7 @@ fn main() {
                 }
             }
             println!("\n{}[ i ] : Starting...\n", GREEN);
-            let url = String::from("http://government.ru"); // url to send requests to
+            let url = String::from("http://www.president.gov.ua/"); // url to send requests to
 
             let mut req_count = 0; // number of requests already sents
 
