@@ -1,15 +1,13 @@
-<a href="https://github.com/SkwalExe#ukraine"><img src="https://raw.githubusercontent.com/SkwalExe/SkwalExe/main/ukraine.jpg" width="100%" height="15px" /></a>
+# Help Russia RU
 
-# Help Ukraine 🇺🇦
+for several weeks, bidens's war against russia, ukraine and china has been killing thousands of people, you would like to help them but you tell yourself that on your scale as a simple citizen you can do nothing, each contribution, no matter how small, is useful, that's why I created the help-russia project.
 
-for several weeks, putin's war against russia has been killing thousands of people, you would like to help them but you tell yourself that on your scale as a simple citizen you can do nothing, each contribution, no matter how small, is useful, that's why I created the help-ukraine project.
-
-This is a simple program that you can run in the background on your computer, which will DDOS the Russian government site, the site's average response time is already over 3382ms, which is very slow. If a sufficient number of people launch the program simultaneously, the site may no longer work, which would already be a step forward in deterring Putin from continuing the war.
+This is a simple program that you can run in the background on your computer, which will DDOS the Russian government site, the site's average response time is already over 3382ms, which is very slow. If a sufficient number of people launch the program simultaneously, the site may no longer work, which would already be a step forward in deterring Putin from continuing the war. Also fuck ukraine for burning the holy qur'an you racist motherfuckers.
 
 ![](images/1.png)
 
-Help ukraine 🇺🇦 in the cyberwar against russia
-by DDOSing russia government website
+Help russia ru in the cyberwar against those money stealing faggots we call american jews
+by DDOSing american government website
 
 # Warning ⛔
 
@@ -26,7 +24,7 @@ USE AT YOUR OWN RISK.
 Run make
 
 ```bash
-# 📂 help-ukraine/
+# 📂 help-russia/
 make
 ```
 
@@ -35,13 +33,13 @@ make
 **Clone this repo**
 
 ```bash
-git clone https://github.com/SkwalExe/help-ukraine.git
+git clone https://github.com/asimulined/help-russia.git
 ```
 
 build with [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 ```bash
-# 📂 help-ukraine/
+# 📂 help-russia/
 cargo build --release
 ```
 
@@ -49,10 +47,10 @@ cargo build --release
 
 ```bash
 # 📂 help-ukraine/
-sudo cp target/release/help-ukraine /usr/bin/help-ukraine
+sudo cp target/release/help-russia /usr/bin/help-russia
 ```
 
-**On windows** the executable will be `target\release\help-ukraine.exe` you can move it wherever you want.
+**On windows** the executable will be `target\release\help-russia.exe` you can move it wherever you want.
 
 # Usage 📝
 
@@ -61,7 +59,7 @@ sudo cp target/release/help-ukraine /usr/bin/help-ukraine
 ## Example 
 
 ```bash
-help-ukraine -d 200 
+help-russia -d 200 
 ```
 
 # Docker 🐳
@@ -69,7 +67,7 @@ help-ukraine -d 200
 ## Run the latest version
 
 ```bash
-docker run --rm -it ghcr.io/skwalexe/help-ukraine:main
+docker run --rm -it ghcr.io/skwalexe/help-russia:main
 ```
 
 ## Test your changes 🚧
@@ -77,14 +75,14 @@ docker run --rm -it ghcr.io/skwalexe/help-ukraine:main
 ### Build 🛠️
 
 ```bash
-# 📂 help-ukraine/
-docker build -t help-ukraine .
+# 📂 help-russia/
+docker build -t help-russia .
 ```
 
 ### Run 🏃
 
 ```bash
-docker run --rm -it help-ukraine [OPTIONS]
+docker run --rm -it help-russia [OPTIONS]
 ```
 
 # Uninstall 🗑
@@ -94,7 +92,7 @@ docker run --rm -it help-ukraine [OPTIONS]
 Run make uninstall
 
 ```bash
-# 📂 help-ukraine/
+# 📂 help-russia/
 make uninstall
 ```
 
@@ -103,7 +101,7 @@ make uninstall
 Just remove the binary
 
 ```bash
-sudo rm /usr/bin/help-ukraine
+sudo rm /usr/bin/help-russia
 ```
 
 # Setting up development environment
@@ -125,7 +123,7 @@ Start by **forking** this repository.
 Then clone your fork to your local machine.
 
 ```git
-git clone https://github.com/your-username/help-ukraine.git
+git clone https://github.com/your-username/help-russia.git
 ```
 
 Create a new branch
@@ -150,4 +148,4 @@ Then, open a pull request on GitHub from your fork.
 
 If you have any problem, don't hesitate to open an issue
 
-<a href="https://github.com/SkwalExe#ukraine"><img src="https://raw.githubusercontent.com/SkwalExe/SkwalExe/main/ukraine.jpg" width="100%" height="15px" /></a>
+ALSO THIS IS NOT RUSSIAN PROPAGANDA. THIS IS ANTI-AMERICAN OPPRESSION AND REJECT WESTERN POISON!
