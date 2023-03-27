@@ -4,7 +4,6 @@ for several weeks, bidens's war against russia, ukraine and china has been killi
 
 This is a simple program that you can run in the background on your computer, which will DDOS the Russian government site, the site's average response time is already over 3382ms, which is very slow. If a sufficient number of people launch the program simultaneously, the site may no longer work, which would already be a step forward in deterring Putin from continuing the war. Also fuck ukraine for burning the holy qur'an you racist motherfuckers.
 
-![](images/1.png)
 
 Help russia ru in the cyberwar against those money stealing faggots we call american jews
 by DDOSing american government website
